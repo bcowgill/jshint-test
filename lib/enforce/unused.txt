@@ -1,0 +1,19 @@
+Linting lib/enforce/unused.js ...ERROR
+[L13:C31] W098: 'unusedAfterUsedFn' is defined but never used.
+  function unusedAfterUsedFn(usedArg, unusedArgAfterUsed, anotherUnusedArg) {
+[L17:C32] W098: 'unusedBeforeUsedFn' is defined but never used.
+  function unusedBeforeUsedFn(unusedArgBeforeUsed2, usedArg, anotherUnusedArg2) {
+[L7:C27] W098: 'unusedVariable' is defined but never used.
+    var unusedVariable; 
+[L10:C23] W098: 'hideUnused' is defined but never used.
+    var hideUnused; 
+[L6:C30] W098: 'unusedArg' is defined but never used.
+  function unused(unusedArg) { 
+[L13:C77] W098: 'anotherUnusedArg' is defined but never used.
+  function unusedAfterUsedFn(usedArg, unusedArgAfterUsed, anotherUnusedArg) { 
+[L13:C59] W098: 'unusedArgAfterUsed' is defined but never used.
+  function unusedAfterUsedFn(usedArg, unusedArgAfterUsed, anotherUnusedArg) {
+[L17:C81] W098: 'anotherUnusedArg2' is defined but never used.
+  function unusedBeforeUsedFn(unusedArgBeforeUsed2, usedArg, anotherUnusedArg2) { 
+[L2:C34] W098: 'unusedGlobalVar' is defined but never used.
+/*global unusedGlobalVar: true */ 

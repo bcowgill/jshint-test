@@ -1,0 +1,28 @@
+{
+  "license": "Unlicense",
+  "private": true,
+  "version": "0.0.1",
+  "name": "jshint-test",
+  "title": "jshint-test",
+  "description": "A test of jshint options",
+  "keywords": [
+    "jshint"
+  ],
+  "author": "Brent S.A. Cowgill (https://github.com/bcowgill)",
+  "main": "dist/enforce.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt --force"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}
