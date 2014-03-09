@@ -29,5 +29,6 @@
         'unused': 'strict',
         'strict': true,
         'trailing': true,
-        'maxerr': 5000
+        'maxerr': 5000,
+        'globals': '{}'
       },

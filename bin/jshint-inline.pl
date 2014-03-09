@@ -84,6 +84,7 @@ sub valueJSON
 sub outputJSON
 {
    my @Output = @ARG;
+   push(@Output, { 'key' => 'globals', 'value' => '{}' });
    print "${JSON_PREFIX}options: {\n$JSON_PREFIX$JSON_INDENT";
    print join(",\n$JSON_PREFIX$JSON_INDENT", map { "'$ARG->{key}': @{[valueJSON($ARG->{'value'})]}" } @Output);
    print "\n${JSON_PREFIX}},\n";
