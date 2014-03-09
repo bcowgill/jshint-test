@@ -17,7 +17,8 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "test": "grunt --force"
+    "test": "grunt --force",
+    "mkprefs": "bin/jshint-inline.pl lib/pref-inline-jshint-opts.js > lib/pref-generated.txt"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

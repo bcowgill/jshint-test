@@ -6,6 +6,7 @@
 
 # bin/jshint-inline.pl lib/_inline_jshint_opts.js
 # bin/jshint-inline.pl lib/pref_inline_jshint_opts.js
+# source: https://github.com/bcowgill/jshint-test/raw/master/bin/jshint-inline.pl
 
 use strict;
 use warnings;
