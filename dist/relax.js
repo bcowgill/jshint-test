@@ -13,6 +13,46 @@
 
 
 (function () {
+	/*jshint esnext: true */
+	function noyield() {
+		// https://github.com/jshint/jshint/issues/1123
+		/*jshint noyield: false */ // FAIL invalid option
+		var of, run;
+
+		run(function *() {
+			return of(5); // not relaxed
+		}); // not relaxed
+	}
+	function noyieldTrue() {
+		/*jshint noyield: true */ // FAIL invalid option
+		var of, run;
+
+		run(function *() {
+			return of(5); // relaxed
+		}); // relaxed FAIL - still warns
+	}
+	noyield();
+	noyieldTrue();
+})();
+
+
+(function () {
+	function proto() {
+		/*jshint proto: false */
+		var protoVal = Object.prototype.__proto__; // not relaxed
+		return protoVal;
+	}
+	function protoTrue() {
+		/*jshint proto: true */
+		var protoNoWarn = Object.prototype.__proto__; // relaxed FAIL - still makes a warning
+		return protoNoWarn;
+	}
+	proto();
+	protoTrue();
+})();
+
+/*jshint maxlen:90 */
+(function () {
 	/*jshint asi:true */
 	// automatic semicolon insertion
 	// http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
@@ -67,9 +107,9 @@
 		/*jshint boss: false */
 		var i, person, personS;
 		// assignments where operator expected
-		if (a = 10) {}
+		if (a = 10) {} // not relaxed
 
-		for (i = 0, person; person = people[i]; i++) {
+		for (i = 0, person; person = people[i]; i++) { // not relaxed
 			console.log(person);
 		}
 
@@ -82,9 +122,9 @@
 		/*jshint boss: true */
 		var i, personT, personTS;
 		// assignments where operator expected
-		if (aT = 10) {}
+		if (aT = 10) {} // relaxed 
 
-		for (i = 0, personT; personT = people[i]; i++) {
+		for (i = 0, personT; personT = people[i]; i++) { // relaxed
 			console.log(personT);
 		}
 
@@ -115,19 +155,19 @@
 (function () {
 	function eqnull(a, console) {
 		/*jshint eqnull: false */
-		if (null == a) {
+		if (null == a) { // not relaxed
 			console.log(a);
 		}
-		if (undefined == a) {
+		if (undefined == a) { // not relaxed
 			console.log(a);
 		}
 	}
 	function eqnullTrue(aT, console) {
 		/*jshint eqnull: true */
-		if (null == aT) {
+		if (null == aT) { // not relaxed
 			console.log(aT);
 		}
-		if (undefined == aT) {
+		if (undefined == aT) { // not relaxed
 			console.log(aT);
 		}
 	}
@@ -178,7 +218,7 @@
 				var xFuncScope = 0; // not relaxed
 			}
 			xFuncScope += 1; // not relaxed
-			return xFuncScope;
+			return xFuncScope; // not relaxed
 		}
 		test();
 	}
@@ -189,7 +229,7 @@
 				var xT = 0; // relaxed
 			}
 			xT += 1; // relaxed
-			return xT;
+			return xT; // relaxed
 		}
 		test();
 	}
@@ -317,7 +357,7 @@
 (function () {
 	function multistr() {
 		/*jshint multistr: false */
-		var text = "Hello\
+		var text = "Hello // not relaxed \
 		World"; // All good.
 
 		text = "Hello // not relaxed
@@ -329,7 +369,7 @@
 	}
 	function multistrTrue() {
 		/*jshint multistr: true */
-		var text = "Hello\
+		var text = "Hello // relaxed \
 		World"; // All good.
 
 		text = "Hello // relaxed
@@ -365,16 +405,115 @@
 
 
 (function () {
-	function proto() {
-		/*jshint proto: false */
-		var proto1 = Object.prototype.__proto__;
-		return proto1;
+	function scripturl() {
+		/*jshint scripturl: false */
+		var url = 'javascript: foo()'; // not relaxed
+		return url;
 	}
-	function protoTrue() {
-		/*jshint proto: true */
-		var proto1 = Object.prototype.__proto__;
-		return proto1;
+	function scripturlTrue() {
+		/*jshint scripturl: true */
+		var urlNoWarn = 'javascript: foo()'; // not relaxed
+		return urlNoWarn;
 	}
-	proto();
-	protoTrue();
+	scripturl();
+	scripturlTrue();
+})();
+
+
+(function () {
+	function shadow(passedIn) {
+		/*jshint shadow: false */
+		if (passedIn) {
+			// shadow variable declared same as outer scope
+			var passedIn = 42; // not relaxed
+			return passedIn;
+		}
+	}
+	function shadowTrue() {
+		/*jshint shadow: true */
+		if (passedIn) {
+			// shadow variable declared same as outer scope
+			var passedIn = 42; // relaxed
+			return passedIn;
+		}
+	}
+	shadow();
+	shadowTrue();
+})();
+
+(function () {
+	function smarttabs(fn) {
+		// smart tabs
+		// http://www.emacswiki.org/emacs/SmartTabs
+
+		/*jshint smarttabs: false */
+		var smartTabs = "tab and spaces" + // tab/indent space/alignment
+		                " aligned";        // not relaxed
+		fn = function (x, // x coord - not relaxed
+		               y, // y coord - not relaxed
+		               z) { return x + y + z; }; // not relaxed
+		return fn(smartTabs);             // space alignment
+	}
+	function smarttabsTrue(fn) {
+		/*jshint smarttabs: true */
+		var smartTabsNoWarn = "tab and spaces" + 
+		                      // tab/indent space/alignment 
+		                      " aligned"; // relaxed
+		fn = function (x, // x coord - relaxed
+		               y, // y coord - relaxed
+		               z) { return x + y + z; }; // relaxed
+		return smartTabsNoWarn;           // space alignment
+	}
+	smarttabs();
+	smarttabsTrue();
+})();
+
+
+(function () {
+	function sub(hash) {
+		/*jshint sub: false */
+		return hash['key']; // not relaxed
+	}
+	function subTrue(hash) {
+		/*jshint sub: true */
+		return hash['key']; // relaxed
+	}
+	sub();
+	subTrue();
+})();
+
+
+(function () {
+	function supernew() {
+		/*jshint supernew: false */
+		// sometimes done for singletons
+		return new function () { // not relaxed
+			this.exists = true; return this;
+		}; // not relaxed
+	}
+	function supernewTrue() {
+		/*jshint supernew: true */
+		// sometimes done for singletons
+		return new function () { // relaxed
+			this.exists = true; return this;
+		}; // relaxed
+	}
+	supernew();
+	supernewTrue();
+})();
+
+/* j s h i n t validthis: true */ // not allowed at global scope
+
+(function () {
+	'use strict';
+	function validthis() {
+		/*jshint validthis: false */
+		return this.event; // not relaxed
+	}
+	function validthisTrue() {
+		/*jshint validthis: true */
+		return this.event; // relaxed
+	}
+	validthis();
+	validthisTrue();
 })();

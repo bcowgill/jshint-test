@@ -37,15 +37,18 @@
 	/*jshint noempty: true */
 	function noempty(obj) {
 		var key, empty, use;
-		// FAIL - first empty block not reported
-		for (key in obj) {}
+		// FAIL - first empty block not reported 
+		// not a fail, for loop is not a loop
+		for (key in obj) {} // empty for non-block
 
-		if (true) {}
-		else {}
+		if (true) {} // empty if block
+		else {} // empty else block
 
-		empty = function () {};
+		empty = function () {}; // empty function block
 		use(key, empty);
-	}
+
+		for (key in obj) {} // empty for non-block
+	} // end noempty()
 	noempty();
 })();
 
@@ -416,7 +419,7 @@ indent();
 
 
 (function () {
-	/*jshint nonbsp: true */
+	/*jshint nonbsp: true */ // FAIL - unknown option
 	function nonbsp() {
 		// there is invisible whitespace U+00A0 on the next line
 		var unicodeNBSP = "nbsp -->[   ] invalid -->[�]",

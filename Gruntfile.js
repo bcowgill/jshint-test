@@ -18,6 +18,10 @@ module.exports = function(grunt) {
       relax: {
         src: ['lib/header.js', 'lib/relax/*.js'],
         dest: 'dist/relax.js'
+      },
+      environment: {
+        src: ['lib/header.js', 'lib/environment/*.js'],
+        dest: 'dist/environment.js'
       }
     },
     jshint: {
@@ -40,11 +44,20 @@ module.exports = function(grunt) {
       relax: {
         src: ['lib/relax/*.js']
       },
+      environment: {
+        src: ['lib/environment/*.js']
+      },
       afterconcat: {
         src: ['dist/*.js']
       },
+      afterconcatenforce: {
+        src: ['dist/enforce.js']
+      },
       afterconcatrelax: {
         src: ['dist/relax.js']
+      },
+      afterconcatenvironment: {
+        src: ['dist/environment.js']
       }
     }
   });
@@ -58,11 +71,12 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['single']);
-  grunt.registerTask('all', ['jshint:package', 'jshint:settings', 'jshint:enforce', 'jshint:relax', 'concat', 'jshint:afterconcat']);
-  grunt.registerTask('before', ['jshint:package', 'jshint:settings', 'jshint:enforce', 'jshint:relax', 'concat']);
+  grunt.registerTask('default', ['all']);
+  grunt.registerTask('all', ['before', 'jshint:afterconcat']);
+  grunt.registerTask('before', ['jshint:package', 'jshint:settings', 'concat', 'jshint:enforce', 'jshint:relax', 'jshint:environment']);
   grunt.registerTask('single', ['jshint:single']);
-  grunt.registerTask('enforce', ['jshint:enforce']);
-  grunt.registerTask('relax', ['jshint:relax', 'concat', 'jshint:afterconcatrelax']);
+  grunt.registerTask('enforce', ['jshint:enforce', 'concat:enforce', 'jshint:afterconcatenforce']);
+  grunt.registerTask('relax', ['jshint:relax', 'concat:relax', 'jshint:afterconcatrelax']);
+  grunt.registerTask('environment', ['jshint:environment', 'concat:environment', 'jshint:afterconcatenvironment']);
   grunt.registerTask('disabled', ['jshint', 'qunit', 'concat', 'uglify']);
 };
