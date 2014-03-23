@@ -48,6 +48,21 @@
 
 
 (function () {
+	function moz() {
+		/*jshint moz: false */
+		null == (TODO_MOZ = "unsure how to demonstrate this");
+		return TODO_MOZ;
+	}
+	function mozTrue() {
+		/*jshint moz: true */
+
+	}
+	moz();
+	mozTrue();
+})();
+
+
+(function () {
 	function boss(a, console, people) {
 		/*jshint boss: false */
 		var i, person, personS;
@@ -163,6 +178,7 @@
 				var xFuncScope = 0; // not relaxed
 			}
 			xFuncScope += 1; // not relaxed
+			return xFuncScope;
 		}
 		test();
 	}
@@ -173,6 +189,7 @@
 				var xT = 0; // relaxed
 			}
 			xT += 1; // relaxed
+			return xT;
 		}
 		test();
 	}
@@ -202,4 +219,162 @@
 	}
 	iterator();
 	iteratorTrue();
+})();
+
+
+(function () {
+	function lastsemic() {
+		/*jshint lastsemic: false */
+		var name = (function() { return 'LastSemicolon' }()); // not relaxed
+		return name;
+	}
+	function lastsemicTrue() {
+		/*jshint lastsemic: true */
+		var nameNoWarn = (function() { return 'LastSemicolonTrue' }()); // relaxed
+		return nameNoWarn;
+	}
+	lastsemic();
+	lastsemicTrue();
+})();
+
+
+(function () {
+	function laxbreak() {
+		/*jshint laxbreak: false */
+		var String1, String2, String3,
+			stringWarn = String1
+			+ '#' // not relaxed
+			+ String2 // not relaxed
+			+ '=' // not relaxed
+			+ String3; // not relaxed
+		return stringWarn;
+	}
+	function laxbreakTrue() {
+		/*jshint laxbreak: true */
+		var String1, String2, String3,
+			stringNoWarn = String1
+			+ '#' // relaxed
+			+ String2 // relaxed
+			+ '=' // relaxed
+			+ String3; // relaxed
+		return stringNoWarn;
+	}
+	laxbreak();
+	laxbreakTrue();
+})();
+
+
+(function () {
+	function laxcomma() {
+		/*jshint laxcomma: false */
+		var obj = {
+			name: 'Anton' // not relaxed
+			, handle: 'valueof' // not relaxed
+			, role: 'SW Engineer' // not relaxed
+		};
+		return obj;
+	}
+	function laxcommaTrue() {
+		/*jshint laxcomma: true */
+		var objNoWarn = {
+			name: 'Anton' // relaxed
+			, handle: 'valueof' // relaxed
+			, role: 'SW Engineer' // relaxed
+		};
+		return objNoWarn;
+	}
+	laxcomma();
+	laxcommaTrue();
+})();
+
+
+(function () {
+	function loopfunc() {
+		/*jshint loopfunc: false */
+		var i, nums = [];
+
+		for (i = 0; i < 10; i++) {
+			nums[i] = function (j) {
+				return i + j;
+			}; // not relaxed
+		}
+	}
+	function loopfuncTrue() {
+		/*jshint loopfunc: true */
+		var i, nums = [];
+
+		for (i = 0; i < 10; i++) {
+			nums[i] = function (j) {
+				return i + j;
+			}; // relaxed
+		}
+	}
+	loopfunc();
+	loopfuncTrue();
+})();
+
+
+(function () {
+	function multistr() {
+		/*jshint multistr: false */
+		var text = "Hello\
+		World"; // All good.
+
+		text = "Hello // not relaxed
+		World"; // Warning, no escape character above.
+
+		text = "Hello // not relaxed \
+		World"; // Warning, there is a space after \ above
+		return text;
+	}
+	function multistrTrue() {
+		/*jshint multistr: true */
+		var text = "Hello\
+		World"; // All good.
+
+		text = "Hello // relaxed
+		World"; // Warning, no escape character above.
+
+		text = "Hello // relaxed \
+		World"; // Warning, there is a space after \ above
+		return text;
+	}
+	multistr();
+	multistrTrue();
+})();
+
+
+(function () {
+	function notypeof(a) {
+		/*jshint notypeof: false */
+		// 'fuction' instead of 'function'
+		if (typeof a == "fuction") { // not relaxed
+			/* ... */
+		}
+	}
+	function notypeofTrue(a) {
+		/*jshint notypeof: true */
+		// 'fuction' instead of 'function'
+		if (typeof a == "fuction") { // relaxed
+			/* ... */
+		}
+	}
+	notypeof();
+	notypeofTrue();
+})();
+
+
+(function () {
+	function proto() {
+		/*jshint proto: false */
+		var proto1 = Object.prototype.__proto__;
+		return proto1;
+	}
+	function protoTrue() {
+		/*jshint proto: true */
+		var proto1 = Object.prototype.__proto__;
+		return proto1;
+	}
+	proto();
+	protoTrue();
 })();

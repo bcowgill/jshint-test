@@ -1,0 +1,679 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"INDENT",
+				"INDENT_LEN"
+			],
+			[
+				"quot",
+				"quotmarkSingle"
+			],
+			[
+				"quotm",
+				"quotmarkDouble"
+			],
+			[
+				"getGro",
+				"getGroupNodes"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 684,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/empty.js",
+			"settings":
+			{
+				"buffer_size": 163,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/relax/iterator.js",
+			"settings":
+			{
+				"buffer_size": 277,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 2212,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bin/jshint-inline.pl",
+			"settings":
+			{
+				"buffer_size": 2153,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/pref-inline-jshint-opts.js",
+			"settings":
+			{
+				"buffer_size": 474,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/permissive-inline-jshint-opts.js",
+			"settings":
+			{
+				"buffer_size": 588,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/pref-generated.txt",
+			"settings":
+			{
+				"buffer_size": 1002,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/sublime-grunt-build/grunt.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"pakage",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 230.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/d/s/github/jshint-test/pj-jshint-test.sublime-project",
+		"/D/d/s/github/jshint-test/lib/_inline_jshint_opts.js",
+		"/D/d/s/github/jshint-test/lib/permissive_inline_jshint_opts.js",
+		"/D/d/s/github/jshint-test/lib/pref_inline_jshint_opts.js",
+		"/D/d/s/github/jshint-test/lib/relax/expr.js",
+		"/D/d/s/github/jshint-test/lib/relax/funcscope.js",
+		"/D/d/s/github/jshint-test/lib/relax/globalstrict.js",
+		"/D/d/s/github/jshint-test/lib/relax/TODO_gcl.js",
+		"/D/d/s/github/jshint-test/dist/relax.js",
+		"/D/d/s/github/jshint-test/lib/relax/evil.js",
+		"/D/d/s/github/jshint-test/lib/relax/TODO_asi.js",
+		"/D/d/s/github/jshint-test/lib/relax/TODO_esnext.js",
+		"/D/d/s/github/jshint-test/lib/relax/eqnull.js",
+		"/D/d/s/github/jshint-test/lib/relax/debug.js",
+		"/D/d/s/github/jshint-test/lib/relax/asi.js",
+		"/D/d/s/github/jshint-test/lib/relax/boss.js",
+		"/D/d/s/js-play/jshint/bin/jshint-inline.pl",
+		"/D/d/s/js-play/jshint/Gruntfile.js",
+		"/D/d/s/js-play/jshint/lib/empty.js",
+		"/D/d/s/js-play/jshint/package.json",
+		"/D/d/s/js-play/jshint/lib/relax/asi.js",
+		"/D/d/s/js-play/jshint/lib/permissive_inline_jshint_opts.js",
+		"/D/d/s/js-play/jshint/lib/_inline_jshint_opts.js",
+		"/D/d/s/js-play/jshint/lib/enforce/nonbsp.js",
+		"/D/d/s/js-play/jshint/lib/enforce/maxlen.js",
+		"/D/d/s/js-play/jshint/lib/ignore/bad.js",
+		"/D/d/s/js-play/jshint/lib/header.js",
+		"/D/d/s/js-play/jshint/lib/enforce/maxomplexity.js",
+		"/D/d/s/js-play/jshint/lib/enforce/maxstatements.js",
+		"/D/d/s/js-play/jshint/lib/enforce/maxdepth.js",
+		"/D/d/s/js-play/jshint/lib/enforce/maxparams.js",
+		"/D/d/s/js-play/jshint/lib/enforce/trailing.js",
+		"/D/d/s/js-play/jshint/lib/enforce/undef.js",
+		"/D/d/s/js-play/jshint/lib/enforce/FAIL_undef_function_scope.js",
+		"/D/d/s/js-play/jshint/lib/enforce/nonew.js",
+		"/D/d/s/js-play/jshint/lib/enforce/quotmark_single.js",
+		"/D/d/s/js-play/jshint/lib/enforce/quotmark_double.js",
+		"/D/d/s/js-play/jshint/lib/enforce/quotmark.js",
+		"/D/d/s/js-play/jshint/lib/enforce/plusplus.js",
+		"/D/d/s/js-play/jshint/lib/enforce/noarg.js",
+		"/D/d/s/js-play/jshint/lib/enforce/indent.js",
+		"/D/d/s/js-play/jshint/lib/enforce/immed.js",
+		"/D/d/s/js-play/jshint/lib/enforce/freeze.js",
+		"/D/d/s/js-play/jshint/lib/enforce/FAIL_noempty.js",
+		"/D/d/s/js-play/jshint/dist/enforce.js",
+		"/D/d/s/js-play/jshint/lib/enforce/strict.js",
+		"/D/d/s/js-play/jshint/lib/enforce/strict_function_scoped.js",
+		"/D/d/s/js-play/jshint/lib/jshintopts.txt",
+		"/D/d/s/js-play/jshint/lib/enforce/unused_vars.js",
+		"/D/d/s/js-play/jshint/lib/enforce/unused_strict.js",
+		"/D/d/s/js-play/jshint/lib/enforce/unused.js",
+		"/D/d/s/js-play/jshint/lib/enforce/TODO_es3.js",
+		"/D/d/s/js-play/jshint/lib/enforce/newcap.js",
+		"/D/d/s/js-play/jshint/lib/enforce/latedef_nofurc.js",
+		"/D/d/s/js-play/jshint/lib/enforce/latedef.js",
+		"/D/d/s/js-play/jshint/lib/enforce/forin.js",
+		"/D/d/s/js-play/jshint/lib/enforce/FAIL_camelcase_function_scope.js",
+		"/D/d/s/js-play/jshint/lib/enforce/eqeqeq.js",
+		"/D/d/s/js-play/jshint/lib/enforce/curly.js",
+		"/D/d/s/js-play/jshint/lib/enforce/camelcase.js",
+		"/D/d/s/js-play/jshint/lib/enforce/bitwise.js",
+		"/D/d/s/js-play/jshint/lib/enforce/FAIL_unused_function_scope.js",
+		"/D/d/s/js-play/jshint/lib/enforce/camelcase_function_scope.js",
+		"/D/d/s/js-play/jshint/lib/enforce/noempty.js",
+		"/D/d/s/js-play/jshint/lib/enforce/TODO_latedef_nofunc.js",
+		"/D/d/s/js-play/jshint/lib/enforce/es3.js",
+		"/D/d/s/js-play/jshint/.jshintignore",
+		"/D/d/s/js-play/jshint/lib/bad-forin.js",
+		"/D/d/s/js-play/jshint/lib/bitwise.js",
+		"/D/d/s/js-play/jshint/lib/bad.js",
+		"/D/d/s/js-play/jshint/utf.pl",
+		"/D/d/s/ontology/play/d3/WebContent/package.json",
+		"/D/d/s/github/QUnitChainer/dist/qunit.css",
+		"/D/d/s/github/QUnitChainer/0-control.html",
+		"/D/d/s/github/QUnitChainer/0-monitor.html",
+		"/D/d/s/github/QUnitChainer/replace.pl",
+		"/D/d/s/github/QUnitChainer/_test_failures/q-test3.html",
+		"/D/d/s/github/QUnitChainer/_test_failures/test-plan.js",
+		"/D/d/s/github/QUnitChainer/_test_passes/q-test3.html",
+		"/D/d/s/github/QUnitChainer/_test_passes/test-plan.js",
+		"/D/d/s/github/QUnitChainer/sample/q-test.html",
+		"/D/d/s/github/QUnitChainer/sample/q-test2.html",
+		"/D/d/s/github/QUnitChainer/sample/q-test3.html",
+		"/D/d/s/github/QUnitChainer/sample/q-test4.html",
+		"/D/d/s/github/QUnitChainer/sample/test-plan.js",
+		"/D/d/s/github/QUnitChainer/Gruntfile.js",
+		"/D/d/s/github/QUnitChainer/jasmine/jasmine-html.js",
+		"/C/Users/me/AppData/Roaming/Sublime Text 2/Packages/Default/Side Bar.sublime-menu",
+		"/C/Users/me/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/me/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/D/d/s/ontology/play/d3/WebContent/dataflow/resources/dagre-d3.js",
+		"/C/Users/me/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/D/d/s/github/BigScreen/pj-BigScreen.sublime-workspace",
+		"/C/Users/me/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/D/d/s/github/BigScreen/js/jquery-ui-1.8.16.custom.min.js",
+		"/D/d/s/github/BigScreen/js/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js",
+		"/C/Users/me/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript.sublime-settings"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"setting",
+			"   ",
+			"  ",
+			"undef",
+			"not_at_all",
+			"nonew",
+			"freeze",
+			"forin",
+			"border-radius",
+			"install_npm_global_from",
+			"getendpointnode",
+			"forIdx",
+			"edge",
+			"ExternalEdges",
+			"severedEdges",
+			"forKeys",
+			"forIdx",
+			"getEndpointNode",
+			"getEndpointNod",
+			"assert",
+			"testLog",
+			".error",
+			"idx",
+			"forIdx",
+			"severedEdge",
+			"collapseGroup",
+			"addGroupNode",
+			"addNode",
+			"addGroupNode",
+			"addNode",
+			"outEdges",
+			"function outEdges",
+			"outEdges",
+			"outEdge",
+			"outEdges",
+			"graphlib",
+			"nodesFromList",
+			"nodes",
+			"collapseGroup",
+			"console.clear",
+			"logVar",
+			"renderer",
+			"layout",
+			"clicked",
+			"edges",
+			"nodes",
+			"dagre",
+			"g",
+			"logEvent",
+			"all",
+			"_postLayout",
+			"layout",
+			"run",
+			"render",
+			"node",
+			"rect",
+			"20800731",
+			"FB84C0",
+			"layout",
+			"nodes_d",
+			"layout",
+			"dataflow",
+			"transform",
+			"BSAC",
+			"console.logVar",
+			"logVar",
+			"d3bug.log",
+			"console.",
+			"log",
+			"logVar",
+			"clear",
+			"render",
+			"; g",
+			";",
+			"dagre",
+			"find",
+			"dark",
+			"menu",
+			"tab_label",
+			"color",
+			"dark_content",
+			"color",
+			"clicktozoom",
+			"OP",
+			"URLs",
+			"log",
+			"checkFor",
+			"chooseRandom",
+			"debugging",
+			"Effects",
+			"Effect",
+			"bounce",
+			"TheEffect",
+			"freeze",
+			"console",
+			"fixedEffect",
+			"loadedURL",
+			"setFloatURL"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"iterator",
+			"globalstrict",
+			"funcscope",
+			"expr",
+			"evil",
+			"eqnull",
+			"debug",
+			"\\t",
+			"logZoom",
+			"Renderer",
+			"Layout",
+			"Clicked",
+			"svgEdges",
+			"svgNodes",
+			"svgDagre",
+			"DAGRenderer",
+			"Graph",
+			"activeView",
+			"dataflow",
+			"console.logVar",
+			";\\ng",
+			";\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"settings":
+					{
+						"buffer_size": 684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								421,
+								421
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/empty.js",
+					"settings":
+					{
+						"buffer_size": 163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								163,
+								163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/relax/iterator.js",
+					"settings":
+					{
+						"buffer_size": 277,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "Gruntfile.js",
+					"settings":
+					{
+						"buffer_size": 2212,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1331,
+								1331
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "bin/jshint-inline.pl",
+					"settings":
+					{
+						"buffer_size": 2153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1726,
+								1726
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Perl/Perl.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1995.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "lib/pref-inline-jshint-opts.js",
+					"settings":
+					{
+						"buffer_size": 474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "lib/permissive-inline-jshint-opts.js",
+					"settings":
+					{
+						"buffer_size": 588,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								490,
+								490
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "lib/pref-generated.txt",
+					"settings":
+					{
+						"buffer_size": 1002,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 239.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 42.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.368460044446,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 381.0
+	},
+	"replace":
+	{
+		"height": 86.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"dagre",
+				"play/d3/WebContent/dagre-d3.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true
+}

@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         src: ['lib/*.js']
       },
       single: {
-        src: ['lib/relax/boss.js']
+        src: ['lib/relax/proto.js']
       },
       unused: {
         src: ['lib/enforce/unused*.js']
@@ -58,7 +58,8 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['jshint:package', 'jshint:settings', 'jshint:enforce', 'jshint:relax', 'concat', 'jshint:afterconcat']);
+  grunt.registerTask('default', ['single']);
+  grunt.registerTask('all', ['jshint:package', 'jshint:settings', 'jshint:enforce', 'jshint:relax', 'concat', 'jshint:afterconcat']);
   grunt.registerTask('before', ['jshint:package', 'jshint:settings', 'jshint:enforce', 'jshint:relax', 'concat']);
   grunt.registerTask('single', ['jshint:single']);
   grunt.registerTask('enforce', ['jshint:enforce']);

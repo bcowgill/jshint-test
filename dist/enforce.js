@@ -220,24 +220,6 @@ indent();
 
 
 (function () {
-	/*jshint latedef: true */
-// Javascript scoping and hoisting
-// http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting
-	function latedef(console) {
-		console.log(NOT_YET_DEFINED);
-		tooLate();
-		if (true) {
-			var NOT_YET_DEFINED = 32;
-		}
-		function tooLate() {
-			return true;
-		}
-	}
-	latedef();
-})();
-
-
-(function () {
 	/*jshint latedef: nofunc */
 // Javascript scoping and hoisting
 // http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting
@@ -252,6 +234,24 @@ indent();
 		}
 	}
 	latedefNoFunc();
+})();
+
+
+(function () {
+	/*jshint latedef: true */
+// Javascript scoping and hoisting
+// http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting
+	function latedef(console) {
+		console.log(NOT_YET_DEFINED);
+		tooLate();
+		if (true) {
+			var NOT_YET_DEFINED = 32;
+		}
+		function tooLate() {
+			return true;
+		}
+	}
+	latedef();
 })();
 
 
@@ -458,19 +458,6 @@ indent();
 
 
 (function () {
-	/*jshint quotmark: true */
-	function quotmark() {
-		// consistency in quote marks
-		var x = 'a',
-			y = "n",
-			z = 'a' + "b" + 'c';
-		return x + y + z;
-	}
-	quotmark();
-})();
-
-
-(function () {
 	/*jshint quotmark: double */
 	function quotmarkDouble() {
 		/*jshint quotmark: double */
@@ -497,6 +484,37 @@ indent();
 	quotmarkSingle();
 })();
 
+
+(function () {
+	/*jshint quotmark: true */
+	function quotmark() {
+		// consistency in quote marks
+		var x = 'a',
+			y = "n",
+			z = 'a' + "b" + 'c';
+		return x + y + z;
+	}
+	quotmark();
+})();
+
+
+(function () {
+	/*jshint strict: true */
+	function notStrict() {
+		var result, that, mine;
+		result = this == that || this != mine;
+		return false;
+	}
+	function strictFunctionScoped() {
+		"use strict"; // function scoped
+		var result, that, mine;
+		result = this == that || this != mine;
+		return true;
+	}
+	strictFunctionScoped();
+	notStrict();
+})();
+
 "use strict"; // global scoped probibited by strict
 
 (function () {
@@ -518,24 +536,6 @@ indent();
 
 
 (function () {
-	/*jshint strict: true */
-	function notStrict() {
-		var result, that, mine;
-		result = this == that || this != mine;
-		return false;
-	}
-	function strictFunctionScoped() {
-		"use strict"; // function scoped
-		var result, that, mine;
-		result = this == that || this != mine;
-		return true;
-	}
-	strictFunctionScoped();
-	notStrict();
-})();
-
-
-(function () {
 	/*jshint trailing: true */
 	function trailing() {
 		// This otherwise perfectly valid string will error if
@@ -544,7 +544,7 @@ indent();
 		World";
 		// The next line should have trailing white space
 		// perl -i.bak -pne 's{(m o r e";)}{$1     }xms' trailing.js
-		str += " some more";     
+		str += " some more trailing spaces on line";     
 		return str;
 	}
 	trailing();
@@ -558,29 +558,6 @@ indent();
 		globalUndefFn.log(typoError, typoerror); // Oops, typoed here. JSHint with undef will complain
 	}
 	undef();
-})();
-
-/*jshint unused: true */ // module scope only
-/*global unusedGlobalVar: true */
-
-(function () {
-	/*jshint unused: true */ // FAIL function scope
-	function unused(unusedArg) {
-		var unusedVariable;
-		/*jshint -W098 */
-		/* FAIL disable warning number not working with grunt-contrib-jshint */
-		var hideUnused;
-	}
-
-	function unusedAfterUsedFn(usedArg, unusedArgAfterUsed, anotherUnusedArg) {
-		return usedArg;
-	}
-
-	function unusedBeforeUsedFn(unusedArgBeforeUsed2, usedArg, anotherUnusedArg2) {
-		return usedArg;
-	}
-
-	unused();
 })();
 
 /*jshint unused: strict */ // module scope only
@@ -619,4 +596,27 @@ indent();
 	}
 
 	unusedVars();
+})();
+
+/*jshint unused: true */ // module scope only
+/*global unusedGlobalVar: true */
+
+(function () {
+	/*jshint unused: true */ // FAIL function scope
+	function unused(unusedArg) {
+		var unusedVariable;
+		/*jshint -W098 */
+		/* FAIL disable warning number not working with grunt-contrib-jshint */
+		var hideUnused;
+	}
+
+	function unusedAfterUsedFn(usedArg, unusedArgAfterUsed, anotherUnusedArg) {
+		return usedArg;
+	}
+
+	function unusedBeforeUsedFn(unusedArgBeforeUsed2, usedArg, anotherUnusedArg2) {
+		return usedArg;
+	}
+
+	unused();
 })();
