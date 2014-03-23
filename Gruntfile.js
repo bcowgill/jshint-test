@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         src: ['lib/*.js']
       },
       single: {
-        src: ['lib/relax/proto.js']
+        src: ['lib/relax/FAIL-noyield.js']
       },
       unused: {
         src: ['lib/enforce/unused*.js']
