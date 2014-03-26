@@ -65,7 +65,7 @@
 /*global unusedGlobalVar: true */
 
 (function () {
-	/*jshint unused: true */ // FAIL function scope
+	/*jshint unused: false */ // FAIL function scope
 	function unusedFunctionScope(unusedArg) {
 		var unusedVariable;
 		/*jshint -W098 */

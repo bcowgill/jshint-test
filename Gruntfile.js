@@ -1,5 +1,7 @@
+/*jshint indent: 2 */
 /*global module:false*/
 module.exports = function(grunt) {
+  'use strict';
   // Project configuration.
   grunt.initConfig({
     // Metadata.
@@ -24,6 +26,8 @@ module.exports = function(grunt) {
         dest: 'dist/environment.js'
       }
     },
+    // jshint warning codes are in:
+    // node_modules/grunt-contrib-jshint/node_modules/jshint/src/messages.js
     jshint: {
       options: { 'force': true },
       'package': {
@@ -33,7 +37,7 @@ module.exports = function(grunt) {
         src: ['lib/*.js']
       },
       single: {
-        src: ['lib/relax/FAIL-noyield.js']
+        src: ['lib/enforce/FAIL-camelcase-function-scope.js']
       },
       unused: {
         src: ['lib/enforce/unused*.js']
@@ -71,7 +75,7 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['all']);
+  grunt.registerTask('default', ['single']);
   grunt.registerTask('all', ['before', 'jshint:afterconcat']);
   grunt.registerTask('before', ['jshint:package', 'jshint:settings', 'concat', 'jshint:enforce', 'jshint:relax', 'jshint:environment']);
   grunt.registerTask('single', ['jshint:single']);

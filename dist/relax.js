@@ -11,46 +11,6 @@
 /*global unusedGlobalVar: true */
 "use strict";
 
-
-(function () {
-	/*jshint esnext: true */
-	function noyield() {
-		// https://github.com/jshint/jshint/issues/1123
-		/*jshint noyield: false */ // FAIL invalid option
-		var of, run;
-
-		run(function *() {
-			return of(5); // not relaxed
-		}); // not relaxed
-	}
-	function noyieldTrue() {
-		/*jshint noyield: true */ // FAIL invalid option
-		var of, run;
-
-		run(function *() {
-			return of(5); // relaxed
-		}); // relaxed FAIL - still warns
-	}
-	noyield();
-	noyieldTrue();
-})();
-
-
-(function () {
-	function proto() {
-		/*jshint proto: false */
-		var protoVal = Object.prototype.__proto__; // not relaxed
-		return protoVal;
-	}
-	function protoTrue() {
-		/*jshint proto: true */
-		var protoNoWarn = Object.prototype.__proto__; // relaxed FAIL - still makes a warning
-		return protoNoWarn;
-	}
-	proto();
-	protoTrue();
-})();
-
 /*jshint maxlen:90 */
 (function () {
 	/*jshint asi:true */
@@ -401,6 +361,45 @@
 	}
 	notypeof();
 	notypeofTrue();
+})();
+
+
+(function () {
+	/*jshint esnext: true */
+	function noyield() {
+		// https://github.com/jshint/jshint/issues/1123
+		/*jshint noyield: false */ // FAIL invalid option
+		var of, run;
+
+		run(function *() {
+			return of(5); // not relaxed
+		}); // not relaxed
+	}
+	function noyieldTrue() {
+		/*jshint noyield: true */ // FAIL invalid option
+		var of, run;
+
+		run(function *() {
+			return of(5); // relaxed
+		}); // relaxed FAIL - still warns
+	}
+	noyield();
+	noyieldTrue();
+})();
+
+(function () {
+	function proto() {
+		/*jshint proto: false */
+		var protoVal = Object.prototype.__proto__; // not relaxed
+		return protoVal;
+	}
+	function protoTrue() {
+		/*jshint proto: true */
+		var protoNoWarn = Object.prototype.__proto__; // relaxed
+		return protoNoWarn;
+	}
+	proto();
+	protoTrue();
 })();
 
 
