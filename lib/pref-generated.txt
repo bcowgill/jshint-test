@@ -3,7 +3,9 @@
 	maxcomplexity: 5, maxlen: 100, bitwise: true, curly: true, eqeqeq: true, 
 	forin: true, freeze: true, immed: true, latedef: true, newcap: true, 
 	noarg: true, noempty: true, nonew: true, plusplus: true, quotmark: true, 
-	undef: true, unused: strict, strict: true, trailing: true, maxerr: 5000
+	undef: true, unused: strict, strict: true, trailing: true, 
+	laxcomma: true, laxbreak: true, multistr: true, smarttabs: true, 
+	maxerr: 5000
 */
       options: {
         'indent': 3,
@@ -29,6 +31,10 @@
         'unused': 'strict',
         'strict': true,
         'trailing': true,
+        'laxcomma': true,
+        'laxbreak': true,
+        'multistr': true,
+        'smarttabs': true,
         'maxerr': 5000,
         'globals': '{}'
       },
