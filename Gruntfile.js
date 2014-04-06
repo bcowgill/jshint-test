@@ -84,3 +84,5 @@ module.exports = function(grunt) {
   grunt.registerTask('environment', ['jshint:environment', 'concat:environment', 'jshint:afterconcatenvironment']);
   grunt.registerTask('disabled', ['jshint', 'qunit', 'concat', 'uglify']);
 };
+// Add this to sublime-project file
+//  "settings": { "build_on_save": 1 }
