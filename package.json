@@ -18,7 +18,8 @@
   },
   "scripts": {
     "test": "grunt --force",
-    "mkprefs": "bin/jshint-inline.pl lib/pref-inline-jshint-opts.js > lib/pref-generated.txt"
+    "mkprefs": "bin/jshint-inline.pl lib/pref-inline-jshint-opts.js > lib/pref-generated.txt",
+    "mkperm": "bin/jshint-inline.pl lib/permissive-inline-jshint-opts.js > lib/permissive-generated.txt"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
