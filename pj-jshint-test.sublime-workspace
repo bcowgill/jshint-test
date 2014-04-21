@@ -27,7 +27,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 684,
+				"buffer_size": 814,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +59,7 @@
 			"file": "Gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 2889,
+				"buffer_size": 2964,
 				"line_ending": "Unix"
 			}
 		},
@@ -100,7 +100,7 @@
 			"file": "lib/pref-generated.txt",
 			"settings":
 			{
-				"buffer_size": 1002,
+				"buffer_size": 1176,
 				"line_ending": "Unix"
 			}
 		},
@@ -469,6 +469,7 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -476,15 +477,15 @@
 					"file": "package.json",
 					"settings":
 					{
-						"buffer_size": 684,
+						"buffer_size": 814,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								278,
-								278
+								1,
+								1
 							]
 						],
 						"settings":
@@ -511,8 +512,8 @@
 						"selection":
 						[
 							[
-								0,
-								163
+								35,
+								35
 							]
 						],
 						"settings":
@@ -537,24 +538,8 @@
 						"selection":
 						[
 							[
-								19,
-								25
-							],
-							[
-								88,
-								94
-							],
-							[
-								95,
-								101
-							],
-							[
-								118,
-								124
-							],
-							[
-								289,
-								295
+								167,
+								167
 							]
 						],
 						"settings":
@@ -571,6 +556,7 @@
 			]
 		},
 		{
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -596,7 +582,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5064.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -606,15 +592,15 @@
 					"file": "Gruntfile.js",
 					"settings":
 					{
-						"buffer_size": 2889,
+						"buffer_size": 2964,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1313,
-								1313
+								0,
+								0
 							]
 						],
 						"settings":
@@ -653,7 +639,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1020.0,
+						"translation.y": 1560.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -670,8 +656,8 @@
 						"selection":
 						[
 							[
-								603,
-								603
+								698,
+								698
 							]
 						],
 						"settings":
@@ -680,7 +666,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 624.0,
+						"translation.y": 483.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -697,8 +683,8 @@
 						"selection":
 						[
 							[
-								312,
-								312
+								451,
+								451
 							]
 						],
 						"settings":
@@ -707,7 +693,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 444.0,
+						"translation.y": 63.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -724,8 +710,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								300,
+								300
 							]
 						],
 						"settings":
@@ -745,15 +731,15 @@
 					"file": "lib/pref-generated.txt",
 					"settings":
 					{
-						"buffer_size": 1002,
+						"buffer_size": 1176,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1176,
+								1176
 							]
 						],
 						"settings":
@@ -763,7 +749,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 467.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -790,7 +776,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 534.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -843,7 +829,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 120.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
