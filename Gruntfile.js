@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         src: ['lib/*.js']
       },
       single: {
-        src: ['lib/enforce/FAIL-camelcase-function-scope.js']
+        src: ['lib/relax/eqnull.js']
       },
       unused: {
         src: ['lib/enforce/unused*.js']
