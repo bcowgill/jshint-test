@@ -51,6 +51,10 @@ module.exports = function(grunt) {
       environment: {
         src: ['lib/environment/*.js']
       },
+      tabs: {
+        options: {},
+        src: ['lib/indent-with-tabs.js']
+      },
       afterconcat: {
         src: ['dist/*.js']
       },
@@ -75,9 +79,9 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['single']);
+  grunt.registerTask('default', ['jshint:tabs']);
   grunt.registerTask('all', ['before', 'jshint:afterconcat']);
-  grunt.registerTask('before', ['jshint:package', 'jshint:settings', 'concat', 'jshint:enforce', 'jshint:relax', 'jshint:environment']);
+  grunt.registerTask('before', ['jshint:package', 'jshint:settings', 'concat', 'jshint:enforce', 'jshint:relax', 'jshint:environment', 'jshint:tabs']);
   grunt.registerTask('single', ['jshint:single']);
   grunt.registerTask('enforce', ['jshint:enforce', 'concat:enforce', 'jshint:afterconcatenforce']);
   grunt.registerTask('relax', ['jshint:relax', 'concat:relax', 'jshint:afterconcatrelax']);
