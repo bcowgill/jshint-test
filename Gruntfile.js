@@ -1,5 +1,19 @@
 /*jshint indent: 2 */
 /*global module:false*/
+/**
+  @file Gruntfile.js
+  @author Brent S.A. Cowgill
+  @see {@link module:Gruntfile}
+  @description
+  Grunt build configuration.
+
+  @see {@link http://usejsdoc.org/ JSDoc Documentation}
+*/
+
+/**
+  Grunt build configuration.
+  @module Gruntfile
+*/
 module.exports = function(grunt) {
   'use strict';
   // Project configuration.
@@ -26,8 +40,12 @@ module.exports = function(grunt) {
         dest: 'dist/environment.js'
       }
     },
-    // jshint warning codes are in:
-    // node_modules/grunt-contrib-jshint/node_modules/jshint/src/messages.js
+    /**
+      jshint validation of javascript code.
+      @see {@link https://github.com/gruntjs/grunt-contrib-jshint About jshint grunt plugin}
+      @see {@link http://jshint.com/docs/options/ jshint options}
+      @see {@link https://github.com/jshint/jshint/blob/master/src/messages.js Warning codes for jshint}
+    */
     jshint: {
       options: { 'force': true },
       'package': {
