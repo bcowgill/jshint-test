@@ -48,6 +48,14 @@
 			}
 		},
 		{
+			"file": "lib/indent-with-tabs.js",
+			"settings":
+			{
+				"buffer_size": 612,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "node_modules/grunt-contrib-jshint/node_modules/jshint/src/messages.js",
 			"settings":
 			{
@@ -59,7 +67,7 @@
 			"file": "Gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 2964,
+				"buffer_size": 3069,
 				"line_ending": "Unix"
 			}
 		},
@@ -177,6 +185,7 @@
 	},
 	"file_history":
 	[
+		"/D/d/s/github/jshint-test/lib/header.js",
 		"/D/d/s/github/jshint-test/lib/relax/supernew.js",
 		"/D/d/s/github/jshint-test/lib/relax/FAIL-proto.js",
 		"/D/d/s/github/jshint-test/lib/relax/noyeild.js",
@@ -469,7 +478,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -538,8 +547,8 @@
 						"selection":
 						[
 							[
-								167,
-								167
+								0,
+								0
 							]
 						],
 						"settings":
@@ -552,6 +561,32 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/indent-with-tabs.js",
+					"settings":
+					{
+						"buffer_size": 612,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								51
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 56.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		},
@@ -560,7 +595,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "node_modules/grunt-contrib-jshint/node_modules/jshint/src/messages.js",
 					"settings":
 					{
@@ -588,19 +623,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "Gruntfile.js",
 					"settings":
 					{
-						"buffer_size": 2964,
+						"buffer_size": 3069,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2337,
+								2337
 							]
 						],
 						"settings":
@@ -609,14 +644,14 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 115.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 2226.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "lib/permissive/permissive-errors.js",
 					"settings":
 					{
@@ -645,7 +680,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "lib/permissive-inline-jshint-opts.js",
 					"settings":
 					{
@@ -672,7 +707,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "lib/pref-inline-jshint-opts.js",
 					"settings":
 					{
@@ -699,7 +734,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "bin/jshint-inline.pl",
 					"settings":
 					{
@@ -727,7 +762,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "lib/pref-generated.txt",
 					"settings":
 					{
@@ -738,8 +773,8 @@
 						"selection":
 						[
 							[
-								1176,
-								1176
+								0,
+								0
 							]
 						],
 						"settings":
@@ -749,13 +784,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 467.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "lib/enforce/FAIL-unused-function-scope.js",
 					"settings":
 					{
@@ -782,7 +817,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "lib/enforce/FAIL-undef-function-scope.js",
 					"settings":
 					{
@@ -808,7 +843,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "lib/enforce/unused.js",
 					"settings":
 					{
@@ -835,7 +870,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "lib/enforce/FAIL-camelcase-function-scope.js",
 					"settings":
 					{
@@ -862,7 +897,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "lib/enforce/camelcase.js",
 					"settings":
 					{
