@@ -55,7 +55,8 @@ module.exports = function(grunt) {
         src: ['lib/*.js']
       },
       single: {
-        src: ['lib/relax/eqnull.js']
+				// grunt jshint:single --check-file filename
+				src: [grunt.option('check-file') || 'lib/relax/eqnull.js']
       },
       unused: {
         src: ['lib/enforce/unused*.js']
